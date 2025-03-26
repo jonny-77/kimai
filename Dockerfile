@@ -7,6 +7,8 @@ WORKDIR /opt/kimai
 # Kopiere alle Dateien in das Container-Dateisystem
 COPY . .
 
+RUN mkdir -p public/avatars public/thumbnail
+
 # Setze die Dateiberechtigungen
 RUN chown -R www-data:www-data /opt/kimai/var /opt/kimai/public/avatars /opt/kimai/public/thumbnail /opt/kimai/public/var
 
